@@ -1,0 +1,31 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Credentials and environment variables
+.env
+.env.*
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.log
+~$*
+
+# Large or private raw datasets
+data/raw/
+**/data/private/

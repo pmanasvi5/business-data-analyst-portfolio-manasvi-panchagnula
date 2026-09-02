@@ -48,7 +48,7 @@ Projects will be added here as they are completed.
 
 - **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/your-profile)
 - **Email:** your.email@example.com
-- **Résumé:** Add a public résumé link when ready
+- **Résumé:** [View or download my résumé](resume/Manasvi_Panchagnula_Resume.pdf) · [Upload instructions](resume/README.md)
 
 ---
 

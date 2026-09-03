@@ -15,17 +15,6 @@ I am a business and data analyst focused on transforming complex information int
 - **Business analysis:** Requirements gathering, process mapping, KPI development, stakeholder communication
 - **Methods:** Data cleaning, exploratory analysis, dashboard design, reporting, recommendations
 
-## Featured Project
-
-### [VT PUMP Mentorship Platform Case Study](project-management/pm-02-vt-pump/README.md)
-
-**Status:** In progress · **Level:** Intermediate
-
-As team lead and schedule manager for both the mentor and mentee subteams, I helped a nine-person team organize a centralized Canvas mentorship experience with separate audience pathways, learning resources, quick links, and 19 recovered instructional videos.
-
-- **Focus:** Team leadership, schedule management, requirements gathering, stakeholder needs, content organization, and delivery
-- **Deliverable:** [Read the full case study](project-management/pm-02-vt-pump/README.md)
-
 ## Project Roadmap
 
 The portfolio contains 18 case-study workspaces across six skill areas. Pages marked **Planned** will be updated with verified findings and deliverables as I complete them.

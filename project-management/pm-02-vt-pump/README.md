@@ -12,7 +12,7 @@ This case study presents how I helped lead and schedule a nine-person team that 
 | **Timeline** | Spring 2025 |
 | **Tools** | Canvas LMS, project scheduling, content design, stakeholder feedback, web publishing |
 | **Skills demonstrated** | Team leadership, schedule management, requirements gathering, stakeholder analysis, workflow design, prioritization, iteration, and handoff documentation |
-| **Links** | [Interactive website](#interactive-website) |
+| **Links** | [Open the live VT PUMP website](https://manasvi-vt-bridge-program.pmanasvi5.chatgpt.site) |
 
 ## Business Problem
 
@@ -51,7 +51,7 @@ The reconstructed website presents the project as a guided case study with mento
 
 ## Interactive Website
 
-The standalone VT PUMP website has been reconstructed and its 19 videos have been converted and tested for browser playback. A permanent shareable deployment link will be placed here after hosting is completed.
+The standalone VT PUMP website is published and its 19 videos have been converted and tested for browser playback. [Open the live interactive website](https://manasvi-vt-bridge-program.pmanasvi5.chatgpt.site).
 
 ## Key Findings
 

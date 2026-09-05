@@ -52,7 +52,6 @@ The portfolio contains 18 case-study workspaces across six skill areas. Pages ma
 
 - **LinkedIn:** [www.linkedin.com/in/manasvi-panchagnula](https://www.linkedin.com/in/manasvi-panchagnula)
 - **Email:** pmanasvi5@gmail.com
-- **Résumé:** [View or download my résumé](resume/Manasvi_Panchagnula_Resume.pdf) · [Upload instructions](resume/README.md)
 
 ---
 

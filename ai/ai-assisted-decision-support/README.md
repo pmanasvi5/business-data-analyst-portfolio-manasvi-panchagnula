@@ -2,6 +2,24 @@
 
 A small, local **Software Vendor Selection Decision Support System** built for an entry-level Business/Data Analyst portfolio. Five fictional vendors are stored in SQLite. User priorities become a transparent ranking; Claude optionally drafts an explanation, and a person approves or flags the result.
 
+## Screenshot walkthrough
+
+These screenshots show a run with all five priority weights set to **3**. TeamFlow ranks first at **7.80/10**, with a monthly cost of **$99**.
+
+### 1. Set business priorities
+
+![Five priority selectors set to 3](01-priorities.png)
+
+### 2. Compare the vendor ranking
+
+![TeamFlow leads the five-vendor ranking, followed by an AI explanation](02-ranking.png)
+
+### 3. Review the AI explanation and record human validation
+
+![AI explanation and the review-recorded state](03-ai-explanation-review.png)
+
+The explanation is a draft for human review. These user-provided screenshots demonstrate the visible workflow, not a formal usability study.
+
 ## Business problem
 
 A company needs to compare software vendors with different prices and capabilities. A repeatable scoring method makes the trade-offs visible and reduces inconsistent, undocumented decisions. This is a demonstration, not a validated procurement tool: vendor scores are fictional, and there are no budget exclusions, compliance checks, or real customer evaluations.

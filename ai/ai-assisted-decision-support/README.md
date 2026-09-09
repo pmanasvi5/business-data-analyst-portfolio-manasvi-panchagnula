@@ -173,17 +173,3 @@ Human Approval
 ```
 
 `app.py` contains database setup, validation, scoring, Claude integration, and the two routes. `templates/index.html` renders the single page. `static/style.css` styles it. These are deliberately kept together so the whole workflow is easy to trace.
-
-## Four likely interview questions
-
-**1. Why did you use a weighted average?**  
-It translates user priorities into a repeatable comparison and keeps the final score on the same 1–10 scale as the source data.
-
-**2. What does AI do in this project?**  
-Claude drafts an explanation of the fixed ranking. Python makes the ranking, so the core recommendation works even if AI is unavailable.
-
-**3. How is SQL used?**  
-SQLite stores vendor attributes and human review decisions. The app queries vendors and inserts feedback using parameterized SQL.
-
-**4. How would you validate or improve it?**  
-Verify scoring and persistence, run the manual UX checklist with a peer, and then validate vendor scores with stakeholders. A later version could record review reasons and the exact weights used, if the business needs that audit detail.

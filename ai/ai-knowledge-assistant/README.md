@@ -102,17 +102,3 @@ Local verification used Python 3.11, Streamlit 1.63.0, Anthropic SDK 1.4.0, PyPD
 Automated smoke tests checked page extraction, chunk overlap and metadata, multiple files, retrieval ranking, zero-match refusal without an API call, the exact Messages request payload, answer/source rendering, context contents, both feedback buttons, and missing-key handling. Claude responses, including an insufficient-evidence response where words matched, were mocked. After API credits were added, both live Claude checks passed: the answerable question returned 20 days with [Handbook.pdf — Page 1], and the unsupported carry-over question returned the exact insufficient-information sentence. Syntax and automated smoke tests also passed after the final change. These sample checks demonstrate the flow; they do not guarantee accuracy on every document or question.
 
 To repeat the live check with your configured key and API credits, test with a simple PDF containing “Annual leave is 20 days.” Ask “How many annual leave days are available?” and check its answer and page citation. Then ask “How many annual leave days can be carried over?” The document does not contain that answer, so Claude should return the insufficient-information message. Compare both responses with Retrieved Context and try both review buttons. This check was completed successfully with the configured account.
-
-## Three interview questions and answers
-
-**1. What makes this a RAG application?**
-
-It retrieves document passages before generating an answer. I use TF-IDF and cosine similarity to select up to three relevant chunks, then provide those chunks as context to Claude. The model is not fine-tuned on the documents.
-
-**2. Why did you use TF-IDF instead of a vector database?**
-
-For a small portfolio demo, TF-IDF is simple, inexpensive, and easy to explain. It ranks passages using weighted word overlap without another service. The tradeoff is weaker matching for synonyms and paraphrases, and it is not designed here for large document collections.
-
-**3. How do you validate AI responses?**
-
-I preserve file/page metadata, display the retrieved excerpts, and ask Claude to cite its answer. A reviewer compares the answer with that evidence and marks Looks Correct or Needs Review. The labels are stored in session state for the demo; they are human judgments, not an accuracy metric or a guarantee of correctness.

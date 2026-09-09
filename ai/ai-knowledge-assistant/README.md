@@ -2,6 +2,20 @@
 
 A small Python and Streamlit portfolio project that answers questions about uploaded PDFs using retrieval-augmented generation (RAG) and the Claude API. All application logic is in `app.py`.
 
+## Screenshots
+
+**1. Upload documents**
+
+![AI Knowledge Assistant upload screen](01-upload.png)
+
+**2. Ask a question about an uploaded PDF**
+
+![Uploaded PDF and question entry](02-question.png)
+
+**3. Review the answer, citations, and retrieved context**
+
+![AI answer with a file/page citation, human review buttons, and expanded retrieved context](03-answer-and-context.png)
+
 ## Business problem
 
 Employees and analysts spend time searching policy documents, handbooks, and reports. This assistant retrieves useful passages and drafts a concise answer with references that a person can check against the original documents.

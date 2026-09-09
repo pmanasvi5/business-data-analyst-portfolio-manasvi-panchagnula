@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Assisted Decision Support System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">SOFTWARE VENDOR SELECTION · PORTFOLIO DEMO</p>
+    <h1>AI-Assisted Decision Support System</h1>
+    <p>Compare five fictional vendors using your business priorities. Review the evidence, then make the decision.</p>
+  </header>
+  {% for message in get_flashed_messages() %}<p class="notice" role="status">{{ message }}</p>{% endfor %}
+  {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+  <section aria-labelledby="priorities">
+    <h2 id="priorities">1. Set your priorities</h2>
+    <p id="weight-help">1 = not important · 5 = extremely important. All criteria still contribute.</p>
+    <form method="post" action="{{ url_for('index') }}">
+      <input type="hidden" name="csrf_token" value="{{ session['csrf_token'] }}">
+      <div class="weights">
+      {% for key, details in criteria.items() %}
+        <label for="{{ key }}">{{ details[0] }}
+          <select id="{{ key }}" name="{{ key }}" required aria-describedby="weight-help">
+          {% for value in range(1, 6) %}<option value="{{ value }}" {% if weights[key] == value %}selected{% endif %}>{{ value }}</option>{% endfor %}
+          </select>
+        </label>
+      {% endfor %}
+      </div>
+      <button type="submit">Generate Recommendation</button>
+      <p class="muted">With an API key, generating an AI explanation may take up to 20 seconds.</p>
+    </form>
+  </section>
+  {% if ranked %}
+  <section aria-labelledby="results">
+    <h2 id="results">2. Review the recommendation</h2>
+    <div class="recommendation"><span class="eyebrow">TOP RECOMMENDATION</span><h3>{{ ranked[0].name }}</h3><p><strong>{{ '%.2f'|format(ranked[0].weighted_score) }} / 10</strong> · ${{ '%.2f'|format(ranked[0].monthly_cost) }} per month (USD)</p></div>
+    <div class="table-wrap"><table>
+      <caption>All five vendors, ranked by weighted score</caption>
+      <thead><tr><th scope="col">Rank</th><th scope="col">Vendor</th><th scope="col">Weighted Score</th><th scope="col">Monthly Cost</th></tr></thead>
+      <tbody>{% for vendor in ranked %}<tr><td>{{ loop.index }}</td><th scope="row">{{ vendor.name }}</th><td>{{ '%.2f'|format(vendor.weighted_score) }} / 10</td><td>${{ '%.2f'|format(vendor.monthly_cost) }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <p class="muted">Score = sum of (criterion score × your weight) ÷ sum of weights. Price uses a 1–10 price score, where higher means more affordable. Full precision determines ranking; ties favor lower cost, then lower vendor ID.</p>
+    <details><summary>Show source scores and calculation</summary>
+      <p>All scores are fictional analyst-assigned values from 1 to 10; higher is better.</p>
+      <div class="table-wrap"><table><thead><tr><th>Vendor</th>{% for key, details in criteria.items() %}<th>{{ details[0] }}</th>{% endfor %}</tr></thead><tbody>
+      {% for vendor in ranked %}<tr><th scope="row">{{ vendor.name }}</th>{% for key, details in criteria.items() %}<td>{{ vendor[details[1]] }}</td>{% endfor %}</tr>{% endfor %}
+      </tbody></table></div>
+      <p>Winning calculation: ({% for key, details in criteria.items() %}{{ ranked[0][details[1]] }} × {{ weights[key] }}{% if not loop.last %} + {% endif %}{% endfor %}) ÷ {{ weights.values()|sum }} = {{ '%.2f'|format(ranked[0].weighted_score) }}.</p>
+    </details>
+    <h3>AI explanation · draft for review</h3>
+    <p class="explanation">{{ explanation }}</p>
+    <p class="muted">Claude explains the Python ranking. Review its claims against the source scores before approving.</p>
+  </section>
+  <section aria-labelledby="validation">
+    <h2 id="validation">3. Validate the decision</h2>
+    <p>Approval records your review. It does not purchase software or change the scores.</p>
+    {% if session.get('pending_vendor_id') %}
+    <form method="post" action="{{ url_for('feedback') }}" class="actions">
+      <input type="hidden" name="csrf_token" value="{{ session['csrf_token'] }}">
+      <button name="decision" value="approved">Approve Recommendation</button>
+      <button class="secondary" name="decision" value="needs_review">Reject / Needs Review</button>
+    </form>
+    {% else %}<p>Review recorded. Generate a new recommendation to submit another review.</p>{% endif %}
+  </section>
+  {% endif %}
+  <footer>Local portfolio project · Fictional vendor data · Transparent scoring, human judgment</footer>
+</main>
+</body>
+</html>

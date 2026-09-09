@@ -17,7 +17,7 @@ I am a business and data analyst focused on transforming complex information int
 
 ## Project Roadmap
 
-The portfolio contains 18 case-study workspaces across six skill areas. Pages marked **Planned** will be updated with verified findings and deliverables as I complete them.
+The portfolio contains 19 project workspaces across seven skill areas. Pages marked **Planned** will be updated with verified findings and deliverables as I complete them.
 
 | Topic | Project | Level | Status |
 |---|---|---|---|
@@ -30,6 +30,7 @@ The portfolio contains 18 case-study workspaces across six skill areas. Pages ma
 | Python | [PY-01 · Bike-Sharing Demand Exploration](python/py-01-bike-demand/README.md) | Beginner | Planned |
 | Python | [PY-02 · Customer Segmentation and Campaign Priorities](python/py-02-customer-segmentation/README.md) | Intermediate | Planned |
 | Python | [PY-03 · Short-Term Retail Demand Forecasting](python/py-03-demand-forecast/README.md) | Hard | Planned |
+| AI | [AI Knowledge Assistant](ai/ai-knowledge-assistant/README.md) | Beginner | Complete · MVP |
 | Project Management | [PM-01 · Portfolio Launch Delivery Plan](project-management/pm-01-portfolio-launch/README.md) | Beginner | Planned |
 | Project Management | [PM-02 · VT PUMP Mentorship Platform Case Study](project-management/pm-02-vt-pump/README.md) | Intermediate | In progress |
 | Project Management | [PM-03 · Retail Analytics Rollout Simulation](project-management/pm-03-analytics-rollout/README.md) | Hard | Planned |

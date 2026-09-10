@@ -30,8 +30,8 @@ The portfolio contains 20 project workspaces across seven skill areas. Pages mar
 | Python | [PY-01 · Bike-Sharing Demand Exploration](python/py-01-bike-demand/README.md) | Beginner | Planned |
 | Python | [PY-02 · Customer Segmentation and Campaign Priorities](python/py-02-customer-segmentation/README.md) | Intermediate | Planned |
 | Python | [PY-03 · Short-Term Retail Demand Forecasting](python/py-03-demand-forecast/README.md) | Hard | Planned |
-| AI | [AI-01 · AI Knowledge Assistant](ai/ai-knowledge-assistant/README.md) | Beginner | Complete |
-| AI | [AI-02 · AI-Assisted Decision Support System](ai/ai-assisted-decision-support/README.md) | Beginner | Complete |
+| AI | [AI-01 · AI-Assisted Decision Support System](ai/ai-assisted-decision-support/README.md) | Beginner | Complete |
+| AI | [AI-02 · AI Knowledge Assistant](ai/ai-knowledge-assistant/README.md) | Intermediate | Complete |
 | Project Management | [PM-01 · Portfolio Launch Delivery Plan](project-management/pm-01-portfolio-launch/README.md) | Beginner | Planned |
 | Project Management | [PM-02 · VT PUMP Mentorship Platform Case Study](project-management/pm-02-vt-pump/README.md) | Intermediate | Complete |
 | Project Management | [PM-03 · Retail Analytics Rollout Simulation](project-management/pm-03-analytics-rollout/README.md) | Hard | Planned |
